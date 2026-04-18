@@ -21,9 +21,13 @@ plugin* load_plugin(char* name){
 		fprintf(stderr, "%s\n", dlerror());
 		return NULL;
 	}
+
 	printf("build function pointer: %p\n", build);
 
-	return NULL;
+
+	plugin* res = build();
+	printf("my plugin : %p {.init = %p, .destroy = %p, .print = %p}\n", res, res->init, res->destroy, res->print);
+	return res;
 }
 
 void unload_plugin(plugin* plugin){
