@@ -5,3 +5,4 @@
 	first_plugin-> put the name of file in init. then if we call plugin.print  it puts it in the file. before line it put tag(first_pluing). 
 	second_plugin-> the same, but it puts (second_plugin) in file. 
 5. make function that get plugin and call print several times. 
+6. unload plugin 
