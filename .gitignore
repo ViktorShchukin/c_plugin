@@ -1,0 +1,7 @@
+#vim 
+*.swp
+
+#c
+*.o
+*.so
+main
