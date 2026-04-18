@@ -1,0 +1,7 @@
+1. see other plugin realization and conpare
+2. pretty format
+3. can't load one plugin several times 
+4. add some functionality for init:
+	first_plugin-> put the name of file in init. then if we call plugin.print  it puts it in the file. before line it put tag(first_pluing). 
+	second_plugin-> the same, but it puts (second_plugin) in file. 
+5. make function that get plugin and call print several times. 
