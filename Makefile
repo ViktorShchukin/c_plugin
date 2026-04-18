@@ -3,7 +3,7 @@ CFLAGS= -g -Wall -fPIC
 OBJS=main.o\
      plugin.o
 
-all: first_plugin.so main run
+all: first_plugin.so second_plugin.so main run
 
 run: 
 	./main
@@ -12,7 +12,11 @@ main: $(OBJS)
 	$(CC) $(CFLAGS) -o main $(OBJS)
 
 first_plugin.so: first_plugin.o
-	$(CC) -shared $(CFLAGS) -o first_plugin.so $<
+	$(CC) -shared $(CFLAGS) -o $@ $<
+
+
+second_plugin.so: second_plugin.o
+	$(CC) -shared $(CFLAGS) -o $@ $<
 
 #main.o: main.c plugin.h
 
